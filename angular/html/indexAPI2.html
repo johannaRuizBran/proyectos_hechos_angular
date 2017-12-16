@@ -1,0 +1,30 @@
+<!DOCTYPE>
+<html ng-app= "MyfirsApp">
+<head>	
+	<title>Practica API 2</title>
+	
+	<meta charset="utf-8">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	
+	<script src="../controller/controllerAPI.js"></script>
+
+</head>
+<body ng-controller= "apiController">
+	<input type="text" ng-model= "newPost.tittle">
+	<br>
+	<textarea ng-model= "newPost.body"></textarea>
+	<br>
+	<button ng-click= "addPost()">Insertar</button>
+	{{postLista}}
+	<br>
+	<br>
+	<h1>DATOS EN LSTA</h1>
+	<ul>
+		<li ng-repeat= "post in postLista">
+			<h2>{{post.tittle}}</h2>
+			<p>{{post.body}}</p>
+		</li>
+	</ul>
+</body>
+</html>

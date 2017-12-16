@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app= "MyfirsApp">  <!--ng-app extiende las capacidades del html le dice al html que continen una aplicación angulasjs-->
+<head>
+	<meta charset="utf-8"> <!-- navegador conocerá la codificación de caracteres utilizada antes de que comience a procesar -->
+	<title>Pracita angularjs</title>
+	<script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script> <!--permite obtener los atributos de angularjs-->
+	<script src="../controller/controllerPrincipal.js"></script>
+</head>
+
+
+<body ng-controller= "FirstController"> <!--con esto enlazamos al controlador-->
+
+	<!--
+	
+	{{"hola "+ nombre}}
+
+	<input type="text" ng-model= "nombre"> ng-model esta conectado a la variable nombre-->
+
+	<!--{{"hola"+" mundo"}} esto aparecerá en la pantalla debido al ng-app el cual es una directiva -->
+	<h3>Realizar comentarios</h3>
+
+	Comentario: <input type="text" ng-model= "nuevoComentario.comentario">
+	Nombre de usuario: <input type="text" ng-model= "nuevoComentario.username">	
+	<button ng-click= "agregarComentario()">Enviar</button>
+
+
+	<h3>Comentarios almacenados</h3>
+	<ul>
+		<li ng-repeat= "coment in comentarios"> <!--ng-repeat es un ciclo-->
+			{{coment.comentario}}
+			<strong>{{coment.username}}</strong>
+		</li>
+	</ul>
+
+</body>
+
+
+</html>

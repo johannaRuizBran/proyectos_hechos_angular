@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app= "MyfirsApp">
+<head>
+	<meta charset="utf-8"> <!-- navegador conocerá la codificación de caracteres utilizada antes de que comience a procesar -->
+	<title>Pracita angularjs</title>
+	<script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script> <!--permite obtener los atributos de angularjs-->
+	<script src="../controller/controllerAPI.js"></script>
+</head>
+<body ng-controller= "apiController">	
+	<h1>hola</h1>
+	<ul>
+		<li ng-repeat= "post in postLista">
+			<h2>{{post.tittle}}</h2>
+			<p>{{post.body}}</p>
+		</li>
+	</ul>	
+
+</body>
+</html>
